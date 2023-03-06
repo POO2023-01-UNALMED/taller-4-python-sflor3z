@@ -3,11 +3,13 @@ from classroom.asignatura import Asignatura
 class Grupo:
     grado = "Grado 12"
 
-    def __init__(self, grupo="grupo predeterminado", asignaturas=[], estudiantes=None):
+    def __init__(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=None):
         self._grupo = grupo
 
         if asignaturas==None:
             self._asignaturas=[]
+        else:
+            self._asignaturas=asignaturas
         
         if estudiantes==None:
             estudiantes=[]
